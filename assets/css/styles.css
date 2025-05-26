@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte base */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Animações globais */
+a,
+button {
+    transition: all 0.3s ease;
+}
+
+/* Hover nos links */
+a:hover {
+    opacity: 0.8;
+}
+
+/* Sombras sutis */
+.shadow-md {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-lg {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões com efeito */
+button:hover,
+a.bg-[#f80305]:hover {
+    transform: scale(1.05);
+}
+
+/* Cartões (cards) com hover elegante */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulário - foco nos campos */
+input:focus,
+textarea:focus {
+    border-color: #f80305;
+    box-shadow: 0 0 0 3px rgba(248, 3, 5, 0.2);
+}
+
+/* Rodapé */
+footer {
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Animação de entrada (opcional) */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Underline animado no hover dos links do menu */
+.hover-underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f80305;
+    transition: width .3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Suaviza a sombra do header */
+header {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Suaviza o efeito de escala no botão */
+a:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito hover para links do menu */
+.menu-link {
+    position: relative;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.menu-link:hover {
+    transform: translateY(-3px);
+    color: #f80305; /* Muda para vermelho principal no hover */
+}

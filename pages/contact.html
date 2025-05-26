@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Agrega - Energia Inteligente</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="50x50"
+      href="/assets/img/favicon.png"
+    />
+
+    <!-- Fonte Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS adicional -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- Configurações Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              background: "#fcfcfc",
+              foreground: "#f80305",
+              accent1: "#f56700",
+              accent2: "#f47800",
+              accent3: "#f38800",
+              dark: "#111111",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-background text-[#333] font-sans">
+    <!-- HEADER -->
+    <header class="bg-white shadow-md px-6 py-4">
+      <div
+        class="max-w-[1280px] mx-auto flex items-center justify-between gap-4 flex-wrap md:flex-nowrap"
+      >
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="/index.html">
+            <img
+              src="/assets/img/logo3.png"
+              alt="Logo Plano Agrega"
+              class="h-10 md:h-10"
+            />
+          </a>
+        </div>
+
+        <!-- Menu navegação desktop -->
+        <nav id="desktop-menu" class="hidden sm:flex items-center space-x-6">
+          <a
+            href="/index.html"
+            class="text-neutral-800 font-medium hover:text-[#f89b05] transition"
+          >
+            Home
+          </a>
+          <a
+            href="/pages/about-us.html"
+            class="text-neutral-800 font-medium hover:text-[#f89b05] transition"
+          >
+            Quem Somos
+          </a>
+          <a
+            href="agrega-academy.html"
+            class="text-neutral-800 font-medium hover:text-[#f89b05] transition"
+          >
+            Agrega Academy
+          </a>
+          <a
+            href="contact.html"
+            class="text-neutral-800 font-medium hover:text-[#f89b05] transition"
+          >
+            Contato
+          </a>
+        </nav>
+
+        <!-- Login Desktop -->
+        <a
+          href="#login"
+          class="hidden sm:flex items-center gap-2 bg-[#f89b05] text-white px-4 py-2 rounded-lg shadow-md hover:scale-105 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.6"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6.75a3 3 0 11-6 0 3 3 0 016 0zM4.5 19.5a7.5 7.5 0 0115 0v.75H4.5V19.5z"
+            />
+          </svg>
+          Acessar Conta
+        </a>
+
+        <!-- Botão menu mobile -->
+        <button
+          class="text-[#f89b05] sm:hidden"
+          onclick="toggleMenu()"
+          aria-label="Abrir menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <nav id="mobile-menu" class="mt-4 hidden sm:hidden flex-col space-y-3">
+        <a
+          href="/index.html"
+          class="block text-neutral-800 font-medium hover:text-[#f89b05] transition"
+        >
+          Home
+        </a>
+        <a
+          href="/pages/about-us.html"
+          class="block text-neutral-800 font-medium hover:text-[#f89b05] transition"
+        >
+          Quem Somos
+        </a>
+        <a
+          href="agrega-academy.html"
+          class="block text-neutral-800 font-medium hover:text-[#f89b05] transition"
+        >
+          Agrega Academy
+        </a>
+        <a
+          href="contact.html"
+          class="block text-neutral-800 font-medium hover:text-[#f89b05] transition"
+        >
+          Contato
+        </a>
+        <a
+          href="#login"
+          class="flex items-center justify-center gap-2 bg-[#f89b05] text-white px-5 py-2.5 rounded-lg shadow-md hover:scale-105 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.6"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6.75a3 3 0 11-6 0 3 3 0 016 0zM4.5 19.5a7.5 7.5 0 0115 0v.75H4.5V19.5z"
+            />
+          </svg>
+          Acessar Conta
+        </a>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section
+      class="text-center py-16 bg-gradient-to-r from-[#f89b05] to-[#d97706] text-white"
+    >
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fale Conosco</h1>
+      <p class="text-xl max-w-2xl mx-auto">
+        Estamos prontos para atender você. Tire dúvidas, faça parcerias ou
+        solicite informações.
+      </p>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <main>
+      <section class="py-16 px-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">Envie sua mensagem</h2>
+        <form
+          action="#"
+          method="POST"
+          class="space-y-6"
+          aria-label="Formulário de contato"
+        >
+          <!-- Nome -->
+          <div>
+            <label for="nome" class="block font-semibold mb-1">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Seu nome"
+              class="w-full border border-neutral-300 rounded px-4 py-2 focus:outline-none focus:border-[#f89b05] focus:ring-1 focus:ring-[#f89b05]"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block font-semibold mb-1">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="seuemail@exemplo.com"
+              class="w-full border border-neutral-300 rounded px-4 py-2 focus:outline-none focus:border-[#f89b05] focus:ring-1 focus:ring-[#f89b05]"
+            />
+          </div>
+
+          <!-- Mensagem -->
+          <div>
+            <label for="mensagem" class="block font-semibold mb-1"
+              >Mensagem</label
+            >
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              required
+              placeholder="Digite sua mensagem"
+              class="w-full border border-neutral-300 rounded px-4 py-2 focus:outline-none focus:border-[#f89b05] focus:ring-1 focus:ring-[#f89b05]"
+            ></textarea>
+          </div>
+
+          <!-- Botão -->
+          <button
+            type="submit"
+            class="inline-flex items-center gap-2 bg-[#f89b05] text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:scale-105 hover:shadow-lg transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.6"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 10.5l19-7-7 19-3.5-8.5L3 10.5z"
+              />
+            </svg>
+            Enviar Mensagem
+          </button>
+        </form>
+      </section>
+
+      <!-- CONTATOS -->
+      <section class="py-16 bg-accent3 text-white text-center">
+        <h2 class="text-3xl font-bold mb-6">Outros Canais</h2>
+        <div class="space-y-4">
+          <p>
+            <strong>WhatsApp:</strong>
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:opacity-80"
+              >+55 11 99999-9999</a
+            >
+          </p>
+          <p><strong>Email:</strong> contato@agrega.com.br</p>
+          <p><strong>Endereço:</strong> Rua da Energia, 123 - São Paulo, SP</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white p-6">
+      <div class="max-w-6xl mx-auto flex justify-center">
+        <p>© 2025 Agrega. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Modal de Feedback -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white rounded-2xl p-8 max-w-sm w-full shadow-xl text-center"
+      >
+        <h2 id="modal-title" class="text-2xl font-bold mb-4">
+          Mensagem enviada!
+        </h2>
+        <p id="modal-message" class="text-neutral-600 mb-6">
+          Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.
+        </p>
+        <button
+          onclick="closeModal()"
+          class="bg-[#f89b05] text-white px-6 py-2 rounded-lg hover:scale-105 transition"
+        >
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
