@@ -234,6 +234,16 @@
       </div>
     </footer>
 
+    <!-- Script para menu mobile -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
     <!-- Script JS -->
     <script src="/assets/js/script.js"></script>
   </body>
